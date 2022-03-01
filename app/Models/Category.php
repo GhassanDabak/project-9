@@ -12,4 +12,16 @@ class Category extends Model
     protected $fillable = [
         'name',
     ];
+
+     /**
+     * Run the database seeders.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Category::factory()
+            ->count(50)
+            ->create();
+    }
 }

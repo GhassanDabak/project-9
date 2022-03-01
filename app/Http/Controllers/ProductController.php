@@ -11,12 +11,12 @@ class ProductController extends Controller
     public function index (){
         $product = Product::all();
         $category = Category::all();
-        return view('admin.product.index', compact('product','category'));
+        return view('admin.products.index', compact('product','category'));
     }
 
     public function add (){
         $category = Category::all();
-        return view('admin.product.create' ,compact('category'));
+        return view('admin.products.create' ,compact('category'));
     }
 
     public function insert (Request $request ){
@@ -35,7 +35,7 @@ class ProductController extends Controller
     public function edit($id){
         $product = Product::find($id);
         $category = Category::all();
-        return view('admin.product.edit', compact('product','category'));
+        return view('admin.products.edit', compact('product','category'));
     }
 
     public function update(Request $request ,$id){

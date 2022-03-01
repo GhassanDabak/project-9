@@ -10,7 +10,7 @@
                 </div>
                 <div class="text">
                     <h2>{{$users->count()}}</h2>
-                    <span>members online</span>
+                    <span>Members Registered</span>
                 </div>
             </div>
         </div>
@@ -24,8 +24,8 @@
                     <i class="zmdi zmdi-shopping-cart"></i>
                 </div>
                 <div class="text">
-                    <h2>388,688</h2>
-                    <span>items solid</span>
+                    <h2>{{$categories->count()}}</h2>
+                    <span>Categories</span>
                 </div>
             </div>
 
@@ -40,8 +40,8 @@
                     <i class="zmdi zmdi-calendar-note"></i>
                 </div>
                 <div class="text">
-                    <h2>1,086</h2>
-                    <span>this week</span>
+                    <h2>{{$products->count()}}</h2>
+                    <span>Product</span>
                 </div>
             </div>
 

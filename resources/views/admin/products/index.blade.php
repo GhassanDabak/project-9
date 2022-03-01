@@ -16,22 +16,24 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user)
+                @foreach ($product as $data)
                 <tr>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->email}}</td>
-                    <td>{{$user->created_at}}</td>
-                    <td>{{$user->updated_at}}</td>
+                    <td>{{$data->name}}</td>
+                    <td>{{$data->description}}</td>
+                    <td>{{$data->price}}</td>
+                    <td>{{$data->category->name}}</td>
+                    <td>{{$data->img_url}}</td>
+                    <td>{{$data->img_alt}}</td>
                     <td>
-                        <a href="{{ url('edit-user/'.$user->id) }}" class="btn btn-info">Edit</a>
-                        <a href="{{ url('delete-user/'.$user->id) }}" class="btn btn-danger">Delete</a>
+                        <a href="{{ url('edit-product/'.$data->id) }}" class="btn btn-info">Edit</a>
+                        <a href="{{ url('delete-product/'.$data->id) }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-    <a href="{{ url('add-user') }}" class="btn btn-primary mt-3">Add User!</a>
+    <a href="{{ url('add-product') }}" class="btn btn-primary mt-3">Add Product!</a>
 </div>
 
 @endsection

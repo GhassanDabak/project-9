@@ -23,4 +23,16 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class, 'cat_id', 'id');
     }
+
+     /**
+     * Run the database seeders.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Product::factory()
+            ->count(50)
+            ->create();
+    }
 }

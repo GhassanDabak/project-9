@@ -1,14 +1,10 @@
 
 @extends('layouts.admin')
 @section('content')
-<div class="col-lg-6">
+<div class="col-lg-9">
     <div class="card">
-        <div class="card-header">Credit Card</div>
+        <div class="card-header">Create Category</div>
         <div class="card-body">
-            <div class="card-title">
-                <h3 class="text-center title-2">Pay Invoice</h3>
-            </div>
-            <hr>
             <form action="{{ url('insert-category') }}" method="post" novalidate="novalidate">
                 @csrf
                 <div class="form-group">
@@ -16,7 +12,7 @@
                     <input id="name" name="name" type="text" class="form-control">
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-lg btn-info btn-block">
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">
                         Add Category
                     </button>
                 </div>

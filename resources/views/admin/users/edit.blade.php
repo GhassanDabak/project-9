@@ -1,13 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-<div class="col-lg-6">
+<div class="col-lg-9">
     <div class="card">
-        <div class="card-header">Credit Card</div>
+        <div class="card-header">Edit User</div>
         <div class="card-body">
-            <div class="card-title">
-                <h3 class="text-center title-2">Pay Invoice</h3>
-            </div>
-            <hr>
             <form action="{{ url('update-user/' . $user->id) }}" method="post" novalidate="novalidate">
                 @method('PUT')
                 @csrf
@@ -25,7 +21,7 @@
                         value="{{ $user->password }}">
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-lg btn-info btn-block">
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">
                         Update
                     </button>
                 </div>

@@ -20,7 +20,7 @@
                         <i class="fa-solid fa-layer-group"></i>Categories</a>
                 </li>
                 <li>
-                    <a href="form.html">
+                    <a href="{{ url('products')}}">
                         <i class="fa-solid fa-box"></i></i>Products</a>
                 </li>
                 <li>

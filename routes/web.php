@@ -33,7 +33,7 @@ Route::put('update-category/{id}', [CategoryController::class, 'update']);
 Route::post('insert-category', [CategoryController::class, 'insert']);
 Route::get('delete-category/{id}', [CategoryController::class, 'destroy']);
 
-Route::get('product', [ProductController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index']);
 Route::get('add-product', [ProductController::class, 'add']);
 Route::get('edit-product/{id}', [ProductController::class, 'edit']);
 Route::put('update-product/{id}', [ProductController::class, 'update']);
