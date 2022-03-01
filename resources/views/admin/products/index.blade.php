@@ -7,9 +7,11 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Email</th>
-                    <th>Date Created</th>
-                    <th>Last Date Update</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Image URL</th>
+                    <th>Image ALT</th>
                     <th>Action</th>
                 </tr>
             </thead>

@@ -12,11 +12,11 @@
                         <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                 </li>
                 <li>
-                    <a href="chart.html">
+                    <a href="{{url('users')}}">
                         <i class="fa-solid fa-users"></i>Users</a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="{{url('categories')}}">
                         <i class="fa-solid fa-layer-group"></i>Categories</a>
                 </li>
                 <li>
