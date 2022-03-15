@@ -73,8 +73,8 @@ button {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 200px;
+    height: 70px;
 }
 
 p {

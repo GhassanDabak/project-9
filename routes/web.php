@@ -24,8 +24,8 @@ Route::get('add-user', [UserController::class, 'add']);
 Route::get('edit-user/{id}', [UserController::class, 'edit']);
 Route::put('update-user/{id}', [UserController::class, 'update']);
 Route::post('insert-user', [UserController::class, 'insert']);
-Route::get('delete-user/{id}', [UserController::class, 'destroy']);
 
+Route::get('delete-user/{id}', [UserController::class, 'destroy']);
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('add-category', [CategoryController::class, 'add']);
 Route::get('edit-category/{id}', [CategoryController::class, 'edit']);
@@ -39,3 +39,7 @@ Route::get('edit-product/{id}', [ProductController::class, 'edit']);
 Route::put('update-product/{id}', [ProductController::class, 'update']);
 Route::post('insert-product', [ProductController::class, 'insert']);
 Route::get('delete-product/{id}', [ProductController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -19,6 +19,9 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             'name' => Str::random(10),
+            'description' => "aaaaaaaaaaaaaaaaaaaaa",
+            'img_url' => "fffffffffffffffff",
+            'img_alt' => "fefwfewfewfewfew"
         ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
@@ -15,6 +16,16 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
     ];
+
+    protected function redirectTo2(){
+        if (Auth::user()->is_admin == 1){
+
+            return redirect('/dashboard');
+        }else{
+            return redirect('localhost:3000');
+        }
+
+    }
 
     /**
      * Register any authentication / authorization services.

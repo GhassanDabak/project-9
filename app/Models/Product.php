@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use app\Models\Category;
 
 class Product extends Model
 {
     use HasFactory;
 
-    protected $table = 'products';
     protected $fillable = [
         'cat_id',
         'name',
@@ -17,11 +17,13 @@ class Product extends Model
         'price',
         'img_url',
         'img_alt',
+        'discount',
+        'stock'
     ];
 
     public function category()
     {
-        return $this->belongsTo(Category::class, 'cat_id', 'id');
+        return $this->belongsTo(Category::class);
     }
 
      /**

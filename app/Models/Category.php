@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use app\Models\Product;
 
 class Category extends Model
 {
@@ -11,7 +12,14 @@ class Category extends Model
 
     protected $fillable = [
         'name',
+        'description',
+        'img_url',
+        'img_alt'
     ];
+
+    public function product(){
+        return $this->hasMany(Product::class);
+    }
 
      /**
      * Run the database seeders.

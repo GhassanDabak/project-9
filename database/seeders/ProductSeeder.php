@@ -21,9 +21,11 @@ class ProductSeeder extends Seeder
             'cat_id'=> '1',
             'name'=> 'aaaaa',
             'description'=> 'aaaaaaaaaaaaaaa',
-            'price'=> '10',
+            'price'=> 10,
             'img_url'=> 'dsadsad',
             'img_alt'=> 'dsadasdasda',
+            'discount'=> 10,
+            'stock' => 10,
         ]);
     }
 }
