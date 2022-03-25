@@ -19,7 +19,14 @@ return new class extends Migration
             $table->foreign('order_id')->references('id')->on('orders');
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->integer('quantity');
+            $table->float('bust_circumference');
+            $table->float('waistline');
+            $table->float('hip_circumference');
+            $table->float('shoulder_width')->default(0);
+            $table->float('back_length')->default(0);
+            $table->float('height');
+            $table->float('sleeve_length')->default(0);
+            $table->float('arm')->default(0);
             $table->timestamps();
         });
     }

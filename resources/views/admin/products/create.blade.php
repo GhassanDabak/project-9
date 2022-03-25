@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header">Create Product</div>
         <div class="card-body">
-            <form action="{{ url('insert-product') }}" method="post" novalidate="novalidate">
+            <form action="{{ url('insert-product') }}" method="post" novalidate="novalidate" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="name" class="control-label mb-1">Name</label>
@@ -28,9 +28,10 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group has-success">
-                    <label for="img_url" class="control-label mb-1">Image URL</label>
-                    <input id="img_url" name="img_url" type="text" class="form-control" >
+
+                <div class="form-group">
+                    <label for="image" class="control-label mb-1">Image</label>
+                    <input id="image" name="image" type="file" class="form-control">
                 </div>
                 <div class="form-group has-success">
                     <label for="img_alt" class="control-label mb-1">Image ALT</label>

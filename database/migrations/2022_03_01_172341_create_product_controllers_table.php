@@ -20,10 +20,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->integer('price');
-            $table->string('img_url');
+            $table->string('image');
             $table->string('img_alt');
-            $table->integer('discount');
-            $table->integer('stock');
+            $table->integer('discount')->default(0);
             $table->timestamps();
         });
     }
@@ -36,5 +35,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('product_controllers');
+
     }
 };

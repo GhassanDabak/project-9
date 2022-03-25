@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -25,14 +27,26 @@ class CategoryController extends Controller
         return view('admin.categories.create', compact('category'));
     }
 
-    public function insert (Request $request ){
+    public function insert(Request $request)
+    {
         $category = new Category();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('images/uploads', $filename);
+            $category->image = $filename;
+        }
+        $category->description = $request->input('description');
         $category->name = $request->input('name');
+        $category->image_alt = $request->input('image_alt');
         $category->save();
         return redirect('/categories');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $category = Category::find($id);
         return view('admin.categories.edit', compact('category'));
     }
@@ -86,7 +100,17 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::findOrFail($id);
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('images/uploads', $filename);
+            $category->image = $filename;
+        }
+
         $category->name = $request->input('name');
+        $category->description = $request->input('description');
+        $category->image_alt = $request->input('image_alt');
         $category->update();
         return redirect('/categories');
     }
@@ -97,11 +121,22 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $id)
+    public function destroy($id)
     {
         $category = Category::find($id);
         Product::where("cat_id", "=", $id)->delete();
         $category->delete();
         return redirect('/categories');
+    }
+
+    public function reactIndex(Request $request)
+    {   $products= Product::all();
+        $category = Category::all();
+        return response()->json([
+            "status"=>"200",
+            "success"=>"yes",
+            "categories"=>$category,
+            "products"=>$products
+        ]);
     }
 }

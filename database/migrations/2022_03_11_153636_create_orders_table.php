@@ -18,13 +18,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('city');
+            $table->string('country');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('street');
+            $table->integer('mobile');
             $table->integer('total');
-            $table->integer('chest')->default(0);
-            $table->integer('waist')->default(0);
-            $table->integer('hip')->default(0);
-            $table->integer('sleeves')->default(0);
-            $table->integer('length')->default(0);
-            $table->integer('color')->default(0);
             $table->timestamps();
         });
     }

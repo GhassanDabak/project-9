@@ -21,7 +21,7 @@
                     <td>{{$data->name}}</td>
                     <td>{{$data->description}}</td>
                     <td>{{$data->price}}</td>
-                    <td>{{$data->category->name}}</td>
+                    <td>{{$data->cat_id}}</td>
                     <td>{{$data->img_url}}</td>
                     <td>{{$data->img_alt}}</td>
                     <td>

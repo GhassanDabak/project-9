@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
-        <a href="#">
-            <img src="images/icon/ayat-logo.png" alt="Ayat Zoubi Logo" width="150" height="30 !important"/>
+        <a href="/">
+            <img src="{{asset('images/icon/ayat-logo.png')}}" alt="Ayat Zoubi Logo" width="150" height="30 !important"/>
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
@@ -24,8 +24,8 @@
                         <i class="fa-solid fa-box"></i></i>Products</a>
                 </li>
                 <li>
-                    <a href="calendar.html">
-                        <i class="fas fa-calendar-alt"></i>Calendar</a>
+                    <a href="{{url('orders')}}">
+                        <i class="fas fa-calendar-alt"></i>Orders</a>
                 </li>
                 <li>
                     <a href="map.html">

@@ -8,7 +8,15 @@
                         <i class="zmdi zmdi-search"></i>
                     </button>
                 </form> --}}
-                <div class="header-button">
+                <div>
+                    <h3>Admin Dashboard </h3>
+                </div>
+                <div><a href="http://localhost:3000">Site</a> </div>
+            </div>
+            </div>
+            </div>
+
+                {{-- <div class="header-button">
                     <div class="noti-wrap">
                         <div class="noti__item js-item-menu">
                             <i class="zmdi zmdi-comment-more"></i>
@@ -129,7 +137,7 @@
                             <div class="content">
                                 <a class="js-acc-btn" href="#">john doe</a>
                             </div>
-                            <div class="account-dropdown js-dropdown">
+                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
@@ -162,10 +170,8 @@
                                         <i class="zmdi zmdi-power"></i>Logout</a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div> --}}
 </header>

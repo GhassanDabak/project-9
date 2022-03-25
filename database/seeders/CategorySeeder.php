@@ -19,9 +19,33 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             'name' => Str::random(10),
-            'description' => "aaaaaaaaaaaaaaaaaaaaa",
-            'img_url' => "fffffffffffffffff",
-            'img_alt' => "fefwfewfewfewfew"
+            'image' => "fffffffffffffffff",
+            'image_alt' => "fefwfewfewfewfew"
+        ]);
+        DB::table('categories')->insert([
+            'name' => Str::random(10),
+            'image' => "fffffffffffffffff",
+            'image_alt' => "fefwfewfewfewfew"
+        ]);
+        DB::table('categories')->insert([
+            'name' => Str::random(10),
+            'image' => "fffffffffffffffff",
+            'image_alt' => "fefwfewfewfewfew"
+        ]);
+        DB::table('categories')->insert([
+            'name' => Str::random(10),
+            'image' => "fffffffffffffffff",
+            'image_alt' => "fefwfewfewfewfew"
+        ]);
+        DB::table('categories')->insert([
+            'name' => Str::random(10),
+            'image' => "fffffffffffffffff",
+            'image_alt' => "fefwfewfewfewfew"
+        ]);
+        DB::table('categories')->insert([
+            'name' => Str::random(10),
+            'image' => "fffffffffffffffff",
+            'image_alt' => "fefwfewfewfewfew"
         ]);
     }
 }

@@ -31,8 +31,8 @@
                         <hr>
                     </div>
                     <div class="form-group has-success">
-                        <label for="img_url" class="control-label mb-1">Image URL</label>
-                        <input id="img_url" name="img_url" type="text" class="form-control" value="{{ $product->img_url }}">
+                        <label for="image" class="control-label mb-1">Image URL</label>
+                        <input id="image" name="image" type="file" class="form-control" value="{{ $product->image }}">
                     </div>
                     <div class="form-group has-success">
                         <label for="img_alt" class="control-label mb-1">Image ALT</label>

@@ -8,7 +8,6 @@
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Admin</th>
                     <th>Date Created</th>
                     <th>Last Date Update</th>
                     <th>Action</th>
@@ -17,9 +16,8 @@
             <tbody>
                 @foreach ($users as $user)
                 <tr>
-                    <td>{{$user->firstName}}</td>
+                    <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->is_admin}}</td>
                     <td>{{$user->created_at}}</td>
                     <td>{{$user->updated_at}}</td>
                     <td>

@@ -12,10 +12,18 @@ class OrderItem extends Model
     protected $fillable = [
         'order_id',
         'product_id',
-        'quantity',
+        'bust_circumference',
+        'waistline',
+        'hip_circumference',
+        'shoulder_width',
+        'back_length',
+        'height',
+        'sleeve_length',
+        'arm',
     ];
 
-    public function order(){
+    public function order()
+    {
         return $this->hasMany(Order::class);
     }
 }

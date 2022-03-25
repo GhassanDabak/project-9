@@ -3,7 +3,10 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Auth::routes();
+
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', [AdminController::class, 'index']);
 
@@ -39,6 +46,12 @@ Route::get('edit-product/{id}', [ProductController::class, 'edit']);
 Route::put('update-product/{id}', [ProductController::class, 'update']);
 Route::post('insert-product', [ProductController::class, 'insert']);
 Route::get('delete-product/{id}', [ProductController::class, 'destroy']);
+
+Route::get('/orders',[OrderController::class,'index']);
+
+
+
+// Route::get('/login',function(){return view('auth.login');});
 
 Auth::routes();
 
