@@ -22,7 +22,10 @@
                     <td>{{$data->description}}</td>
                     <td>{{$data->price}}</td>
                     <td>{{$data->cat_id}}</td>
-                    <td>{{$data->img_url}}</td>
+                    <td>
+                        <img src={{ asset('images/uploads/' . $data->image) }} name="image" width="100px" height="100px" alt={{$data->img_alt}}/>
+
+                    </td>
                     <td>{{$data->img_alt}}</td>
                     <td>
                         <a href="{{ url('edit-product/'.$data->id) }}" class="btn btn-info">Edit</a>

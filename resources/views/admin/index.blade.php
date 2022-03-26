@@ -56,8 +56,8 @@
                     <i class="zmdi zmdi-money"></i>
                 </div>
                 <div class="text">
-                    <h2>$1,060,386</h2>
-                    <span>total earnings</span>
+                    <h2>{{$orders->count()}}</h2>
+                    <span>total orders made</span>
                 </div>
             </div>
 

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('street');
-            $table->integer('mobile');
+            $table->string('mobile');
             $table->integer('total');
             $table->timestamps();
         });
